@@ -324,7 +324,7 @@ screen navigation():
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            textbutton _("Controls") action ShowMenu("help")
 
         if renpy.variant("pc"):
 
@@ -537,7 +537,8 @@ style return_button:
     yalign 1.0
     yoffset -45
 
-
+screen discord():
+    pass
 ## About screen ################################################################
 ##
 ## This screen gives credit and copyright information about the game and Ren'Py.
@@ -560,6 +561,9 @@ screen about():
 
             label "[config.name!t]"
             text _("Version [config.version!t]\n")
+
+            text _("The Students was developed by Carter. You can find him on GitHub as sspeedwagonn!\n")
+            text _("The Students is based off of The Scholars by Car Seat Headrest.\nCharacters, settings, and storylines are adapted from the original source material.\n")
 
             ## gui.about is usually set in options.rpy.
             if gui.about:
